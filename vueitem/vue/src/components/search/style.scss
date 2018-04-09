@@ -1,0 +1,28 @@
+@import "~@/lib/reset.scss";
+.search {
+    @include rect(100%, 100%);
+    @include flexbox();
+    .logo {
+        @include rect(0.26rem, 100%);
+        @include margin(0 0.1rem 0 0.1rem);
+        background: url(./../../assets/logo.png) no-repeat center;
+        background-size: contain;
+    }
+    .mint-search {
+        @include flex();
+        .mint-searchbar {
+            @include background-color(#fff);
+        }
+        .mint-searchbar-inner,
+        input {
+            @include background-color(#F4F4F4);
+        }
+    }
+    .user {
+        @include rect(0.20rem, 100%);
+        @include margin(0 0.1rem 0 0.07rem);
+        background-size: 0.17rem 0.15rem;
+        background: url(./../../assets/user.png) no-repeat center;
+        background-size: contain;
+    }
+}

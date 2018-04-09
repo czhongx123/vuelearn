@@ -1,0 +1,269 @@
+@import "~@/lib/reset.scss";
+.content {
+    position: relative;
+    .mint-swipe {
+       
+        @include rect(100%, 4.5rem);
+        .mint-swipe-items-wrap {
+            @include rect(100%, 100%);
+            img {
+                @include rect(100%, 100%);
+            }
+        }
+    }
+    //产品信息
+    .detailcon {
+        padding: 0 0.1rem;
+        .detailtit {
+            margin-top: 0.1rem;
+            @include text-color(#424242);
+            @include line-height(0.3rem);
+            @include font-size(0.16rem);
+        }
+        .detailitem {
+            padding: 0.1rem 0;
+            .price {
+                @include font-size(0.20rem);
+                @include text-color(#f69);
+                font-weight: 600;
+            }
+            .oldprice {
+                text-decoration: line-through;
+                @include text-color(#999);
+                @include font-size(0.14rem);
+                padding: 0 0.1rem;
+            }
+            .discound {
+                @include text-color(#fff);
+                @include font-size(0.12rem);
+                @include rect(0.3rem, 0.18rem);
+                position: relative;
+                top: -0.1rem;
+                left: -0.05rem;
+                @include text-align();
+                @include background-color(#FF6699);
+                @include display(inline-block);
+                border-radius: 0.3rem;
+            }
+        }
+        .detailinfo {
+            @include flexbox();
+            @indlude justify-content();
+            @include font-size(0.12rem);
+            @include text-color(#999);
+            span {
+                @include flex();
+            }
+        }
+    }
+    .tocart {
+        position: fixed;
+        right: 0.1rem;
+        bottom: 0.8rem;
+        z-index:1000;
+        @include background-color(#FF6699);
+        @include rect(0.4rem, 0.4rem);
+        border-radius: 0.4rem;
+        @include text-align(right);
+        display: block;
+        background: url("./../../assets/tocart.png");
+        background-repeat: no-repeat;
+        background-position: center 0rem;
+        @include text-color(#fff);
+        background-size: 0.4rem;
+        .cartnum {
+            @include background-color(#f36);
+            @include display(inline-block);
+            padding: 0.025rem 0.025rem;
+            @include rect(0.15rem,
+            0.15rem);
+            @include line-height(0.1rem);
+            @include text-align();
+            border-radius: 100%;
+            @include font-size(0.12rem);
+            position: relative;
+            right: 0rem;
+            top: 0.05rem;
+        }
+    }
+    .sellshow {
+        margin-top: 0.2rem;
+        p {
+            padding-left: 0.2rem;
+        }
+        img {
+            @include rect(100%,
+            auto)
+        }
+    }
+    .detailfooter {
+        position: fixed;
+        bottom: 0;
+        @include rect(100%,
+        0.6rem);
+        @include flexbox();
+        border-top: 1px solid #cecece;
+        .seller,
+        .shopID,
+        .inheart {
+            @include rect(auto,
+            100%);
+            @include background-color(#fff);
+            @include flex();
+            @include text-align();
+            a {
+                @include rect(100%,
+                100%);
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content(space-around);
+                @include align-items();
+                @include text-color(#999);
+                @include font-size(0.12rem);
+                span {
+                    @include rect(0.3rem,
+                    0.3rem);
+                    margin-top: 0.05rem;
+                    background-image: url("./../../assets/productdetail.png");
+                    background-repeat: no-repeat;
+                    background-size: 0.3rem;
+                }
+                em {
+                    @include rect(100%,
+                    auto);
+                }
+            }
+        }
+        .inhert a span {
+            background-position: center top;
+        }
+        .shopID a span {
+            background-position: center -1.33rem;
+        }
+        .seller a span {
+            background-position: center -0.7rem;
+        }
+        .addcart,
+        .buy {
+            @include line-height(0.6rem);
+            @include font-size(0.16rem);
+            @include flex(2);
+            @include text-align();
+            @include rect(auto,
+            100%);
+            a {
+                display: inline-block;
+                @include rect(100%,
+                100%);
+            }
+        }
+        .addcart {
+            @include background-color(#ffe817);
+            a {
+                @include text-color(#333);
+            }
+        }
+        .buy {
+            @include background-color(#f69);
+            a {
+                @include text-color(#fff);
+            }
+        }
+    }
+    .select {
+        position: fixed;
+        @include rect(100%,
+        100%);
+        top: 0;
+        z-index:500;
+        overflow: auto;
+        background: rgba(0, 0, 0, .5);
+        .selectitem {
+            position: fixed;
+            bottom: 0;
+            @include rect(100%,
+            auto);
+            @include background-color(#fff);
+            .selectinfo {
+                padding: 0.1rem;
+                @include flexbox();
+                @include justify-content();
+                img {
+                    @include rect(0.8rem,
+                    1.2rem)
+                }
+                .selectcon {
+                    @include flex();
+                    padding: 0 0.1rem;
+                    .selecttit {
+                        @include text-color(#666);
+                        @include font-size(0.14rem);
+                        @include line-height(0.18rem);
+                        margin-bottom: 0.1rem;
+                    }
+                    .selecttips {
+                        span {
+                            @include font-size(0.2rem);
+                            @include text-color(#f69);
+                        }
+                        em {
+                            @include font-size(0.12rem);
+                            @include text-color(#999);
+                        }
+                    }
+                    .tips {
+                        @include text-color(#999);
+                        @include font-size(0.12rem);
+                    }
+                }
+                .close {
+                    @include rect(0.3rem,
+                    0.3rem);
+                    @include font-size(0.2rem);
+                    @include text-color(#ccc);
+                    @include text-align();
+                    font-family: serif;
+                }
+            }
+            .color,
+            .size,
+            .quanty {
+                padding: 0 0.1rem;
+                border-top: 1px solid #eee;
+                p {
+                    span,
+                    em {
+                        @include background-color(#f8f8f8);
+                        border-radius: 0.03rem;
+                        margin-right: 0.1rem;
+                        padding: 0.05rem 0.1rem;
+                    }
+                    &:nth-of-type(1) {
+                        @include font-size(0.14rem);
+                        @include text-color(#888);
+                        padding: 0.05rem 0 0 0;
+                    }
+                    &:nth-of-type(2) {
+                        @include font-size(0.14rem);
+                        @include text-color(#666);
+                        padding: 0.05rem 0;
+                        @include flexbox();
+                    }
+                    .active {
+                        @include background-color(#f69);
+                        @include text-color(#fff);
+                    }
+                }
+            }
+            .buysure {
+                @include rect(100%,
+                0.4rem);
+                @include text-align();
+                @include line-height(0.4rem);
+                @include background-color(#f69);
+                @include text-color(#fff);
+                @include font-size(0.14rem);
+            }
+        }
+    }
+}

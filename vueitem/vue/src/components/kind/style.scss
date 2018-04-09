@@ -1,0 +1,39 @@
+@import "~@/lib/reset.scss";
+body #app .header {
+    border-bottom: 0 !important;
+}
+
+p {
+    @include rect(100%, 0.3rem);
+    @include text-color(#333);
+    @include line-height(0.3rem);
+    padding-left: 0.2rem;
+}
+
+ul {
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include box-sizing(border-box);
+    li {
+        @include rect(25%, auto);
+        border: 0.01rem solid #eee;
+        border-bottom: 0;
+        border-left: 0;
+        &:nth-of-type(4n) {
+            border-right: 0;
+        }
+        a {
+            @include rect(100%, 100%);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-around);
+            @include align-items();
+            @include text-color(#666);
+            img {
+                @include rect(100%, auto);
+            }
+            span {}
+        }
+    }
+}

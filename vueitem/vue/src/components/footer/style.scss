@@ -1,0 +1,19 @@
+@import "~@/lib/reset.scss";
+.footer {
+    li {
+         @include text-color(#999);
+        img {
+            @include rect(0.19rem, 0.19rem);
+            
+        }
+     
+        em {
+            @include font-size(0.12rem);
+           
+        }
+    }
+    .router-link-active{
+        @include text-color(#ff3366);
+        
+    }
+}

@@ -1,0 +1,175 @@
+@import "~@/lib/reset.scss";
+.emptycar {
+    @include flexbox();
+    @include rect(100%, 100%);
+    @include align-items();
+    @include background-color(#f4f4f4);
+    @include flex-direction(column);
+    @include text-color(#666);
+    padding-top: 0.6rem;
+    a {
+        margin-top: 0.2rem;
+        padding: 0.06rem 0.2rem;
+        @include background-color(#f66);
+        @include text-color(#fff);
+        border-radius: 0.02rem;
+    }
+}
+
+.content {
+    position: relative;
+    @include background-color(#f4f4f4);
+    .topemptybox{
+            @include rect(100%, 0.45rem);
+        
+    }
+    .header {
+    position: fixed;
+    top: 0;
+    @include background-color(#f4f4f4);
+        
+        ul {
+            @include flexbox();
+            @include rect(100%, 100%);
+            @include align-items();
+            @include justify-content(space-around);
+            li {
+                @include text-align();
+                @include flex(1);
+                @include font-size(0.18rem);
+                @include rect(auto, 100%);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include text-color(#666);
+            }
+            .center {
+                @include flex(3);
+                @include text-align();
+            }
+        }
+    }
+}
+
+.carcon {
+    @include background-color(#f4f4f4);
+    @include rect(100%, 100%);
+    .product {
+        margin-bottom: 0.1rem;
+        @include background-color(#fff);
+        .protit {
+            @include flexbox();
+            @include rect(100%, 0.6rem);
+            @include justify-content(space-between);
+            border-bottom: 0.01rem solid #eee;
+            @include line-height(0.6rem);
+            @include align-items();
+            .shopprice {
+                span {
+                    @include font-size(0.18rem);
+                    @include text-color(#f69);
+                }
+            }
+            .tit1 {
+                @include rect(0.5rem, auto);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+            }
+            em {
+                @include rect(0.3rem, auto);
+            }
+        }
+        .procon {
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items();
+            @include rect(100%, auto);
+            padding: 0.1rem 0.1rem 0.1rem 0;
+            .con1 {
+                @include rect(0.5rem, auto);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+            }
+            img {
+                @include rect(0.6rem, 0.8rem);
+                margin-right: 0.05rem;
+            }
+            .prodeil {
+                @include rect(40%, 100%);
+                @include flexbox();
+                @include flex-direction(column);
+                .prodeiltit {
+                    @include rect(100%, 0.2rem);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .style {
+                    @include font-size(0.12rem);
+                    @include text-color(#999);
+                }
+                .num {
+                    margin-top: 0.05rem;
+                    em,
+                    span {
+                        padding: 0.05rem 0.1rem;
+                        border: 0.01rem solid #cecece;
+                    }
+                }
+            }
+            .priceaction {
+                @include rect(0.5rem, 100%);
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items();
+                @include font-size(0.12rem);
+                @include text-color(#999);
+                .price {
+                    @include font-size(0.18rem);
+                    @include text-color(#f69);
+                }
+                .oldPrice {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+    .emptybox {
+        @include rect(100%, 1rem);
+    }
+    .payitem {
+        position: fixed;
+        bottom: 0.49rem;
+        @include flexbox();
+        border-top: 0.01rem solid #eee;
+        padding: 0.1rem 0.1rem 0.1rem 0;
+        @include background-color(#fff);
+        @include rect(100%, auto);
+        .all {
+            @include rect(0.5rem, auto);
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+        }
+        .allprice {
+            @include flex();
+            @include text-align();
+            p {
+                span {
+                    @include font-size(0.18rem);
+                    @include text-color(#f69);
+                }
+            }
+        }
+        .pay {
+            @include rect(1rem, auto);
+            @include background-color(#f66);
+            border-radius: 0.03rem;
+            padding: 0.1rem 0;
+            @include text-align();
+            @include text-color(#fff);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "~@/lib/reset.scss";
+.banner {
+    @include rect(100%, 1.8rem);
+    .mint-swipe{
+    @include rect(100%, 1.8rem);
+        
+    }
+    img {
+        @include rect(100%, 1.8rem);
+    }
+    .mint-swipe-indicator {
+        opacity: 0.7 !important;
+        @include background-color(#fff);
+    }
+    .mint-swipe-indicators {
+        .is-active {
+            @include background-color(#d43e2e);
+            opacity: 0.7 !important;
+        }
+    }
+}

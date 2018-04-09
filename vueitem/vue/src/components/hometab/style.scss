@@ -1,0 +1,70 @@
+@import "~@/lib/reset.scss";
+.hometab {
+    @include rect(100%, 0.4rem);
+    .tabtit {
+        @include rect(100%, 100%);
+        @include flexbox();
+        @indlude justify-content();
+        @include align-items();
+        li {
+            @include flex();
+            @include text-align();
+            @include text-color(#666);
+            @include font-size(0.14rem);
+        }
+        .active {
+            @include text-color(#FF3366);
+            span {
+                padding: 0.04rem 0;
+                border-bottom: 2px solid #FF3366;
+            }
+        }
+    }
+    .tabcon {
+        @include rect(100%, auto);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include flex-wrap(wrap);
+        li {
+            @include rect(47%, 2.90rem);
+            .pic {
+                @include font-size(0.10rem);
+                @include rect(100%, 2.40rem);
+            }
+            .contit {
+                @include rect(100%, 0.14rem);
+                margin: 0.1rem 0 0 0;
+                @include text-color(#666);
+                line-height: 0.14rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .condetail {
+                @include flexbox();
+                @include justify-content();
+                @include rect(100%, 0.12rem);
+                span {
+                    @include text-color(#FF3366);
+                    margin: 0 0.1rem 0 0;
+                }
+                em {
+                    .icon {
+                        @include rect(0.12rem, 0.12rem);
+                        margin: 0 0.1rem 0 0;
+                    }
+                }
+                strong {
+                    @include text-color(#999);
+                }
+            }
+        }
+    }
+    img[lazy=loading] {
+  width: 40px;
+  height: 300px;
+  margin: auto;
+    
+   } 
+    
+}

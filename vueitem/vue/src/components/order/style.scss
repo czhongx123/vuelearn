@@ -1,0 +1,159 @@
+@import "~@/lib/reset.scss";
+.content {
+    @include background-color(#f4f4f4);
+    .orderheader {
+        padding: 0.1rem 0;
+        @include background-color(#fff);
+        ul {
+            @include flexbox();
+            @include rect(100%, 100%);
+            @include align-items();
+            @include justify-content(space-around);
+            li {
+                @include text-align();
+                @include font-size(0.18rem);
+                @include rect(auto, 100%);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include text-color(#666);
+            }
+            .back {
+                //          @include rect(20%, 100%);
+                padding: 0 0.1rem;
+            }
+            .right {
+                padding: 0 0.1rem;
+            }
+            .center {
+                @include flex();
+                //              @include text-align();
+            }
+        }
+    }
+    form {
+        .address {
+            @include background-color(#fff);
+            padding: 0.1rem 0.1rem;
+            @include text-color(#999);
+            @include font-size(0.1rem);
+            margin: 0.07rem 0;
+        }
+        .orderlist {
+            @include background-color(#fff);
+            margin-bottom: 0.07rem;
+            padding: 0 0.1rem;
+            .ordertit {
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items();
+                padding: 0.1rem 0;
+                a {
+                    border: 0.01rem solid #f69;
+                    @include text-color(#f69);
+                    border-radius: 0.04rem;
+                    padding: 0.05rem 0.1rem;
+                }
+            }
+            .ordercon {
+                .contop {
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items();
+                    img {
+                        @include rect(0.6rem, 0.8rem);
+                    }
+                    .orderconcenter {
+                        padding-left: 0.13rem;
+                        .tit {
+                            @include text-color(#333);
+                            overflow: hidden;
+                            white-space: normal;
+                            text-overflow: ellipsis;
+                            @include font-size(0.12rem);
+                        }
+                        .style {
+                            @include text-color(#999);
+                            @include font-size(0.12rem);
+                            span {
+                                margin-right: 0.2rem;
+                            }
+                        }
+                        .pricelist {
+                            @include flexbox();
+                            @include justify-content(space-between);
+                            @include align-items();
+                            @include text-color(#333);
+                            @include font-size(0.12rem);
+                            .oldPrice {
+                                @include text-color(#999);
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+            .msg {
+                margin-top: 0.2rem;
+                border-top: 0.01rem solid #eee;
+                p {
+                    padding: 0.1rem 0;
+                    @include text-color(#666);
+                    @include font-size(0.14rem);
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    @include align-items();
+                    border-bottom: 0.01rem solid #eee;
+                    strong {
+                        font-weight: normal;
+                    }
+                    .allprice {
+                        @include text-color(#f69);
+                    }
+                }
+                input {
+                    outline: none;
+                    border: 0;
+                    @include background-color(#eee);
+                    margin: 0.2rem 0;
+                    padding: 0.02rem 0;
+                    @include rect(100%, auto);
+                    text-indent: 0.2rem;
+                }
+            }
+        }
+        .bottom {
+            @include background-color(#fff);
+            @include font-size(0.12rem);
+            .alert {
+                padding: 0.1rem 0;
+                border-bottom: 0.01rem solid #eee;
+                text-align: center;
+            }
+            .topay {
+                padding: 0.2rem 0;
+                position: relative;
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items();
+                em {
+                    @include text-color(#f69);
+                    @include font-size(0.16rem);
+                    
+                    
+                }
+                a {
+                    margin-left: 0.3rem;
+                    padding: 0.1rem 0.2rem;
+                    @include background-color(#f69);
+                    @include text-color(#fff);
+                    @include font-size(0.16rem);
+                    border-radius: 0.05rem;
+                    @include rect(auto, 0.3rem);
+                    @include line-height(0.1rem);
+
+                }
+            }
+        }
+    }
+}
